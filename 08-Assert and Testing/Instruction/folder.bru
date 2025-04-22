@@ -1,0 +1,77 @@
+meta {
+  name: Instruction
+}
+
+docs {
+  # Challenge Overview 
+  
+  ## Instructions
+  
+  ### 📁 Step 1: Create a Request
+  
+  1. In your Bruno collection, create a new request named: `assert-testing`.
+  2. Set the **method** to `POST`.
+  3. Use the following **URL**:
+  
+  ```js
+  https://echo.usebruno.com
+  ```
+  
+  4. Go to the **Body** tab.
+  5. Select `JSON` and paste the following payload:
+  
+  ```json
+  {
+    "challenge_no": 8,
+    "title": "Assert and Testing",
+    "you_love_bruno": true
+  }
+  ```
+  Step 2: Add an Assertion
+  
+  Bruno lets you create basic assertions without writing code.
+  
+  - Go to the Assert tab.
+  - Add following details:
+  
+  
+  
+  
+  ✅ This assertion will check that the response status code is 200.
+  
+  ### Step 3: Add a Test Script
+  
+  - Go to the `Test` tab.
+  
+  - Add the following code:
+  
+  ```js copy
+  test("Check response body contains 'title' property", function () {
+    expect(res.getBody()).to.have.property("title");
+  });
+  
+  test("You must love Bruno! 🧡", function () {
+    const body = JSON.parse(res.getBody());
+    expect(body.youLoveBruno).to.be.true;
+  });
+  ```
+  
+  ### Step 4: Run the Request
+  - Execute the request.
+  
+  - Go to the Test section to see both your assertion and test case results.
+  
+  You should see both tests pass! ✅
+  
+  ## 🎉 Summary
+  In this challenge, you learned how to:
+  
+  - ✅ Use Bruno’s built-in assertion UI
+  - ✅ Write custom test scripts
+  - ✅ Validate both status codes and response data programmatically
+  
+  You're officially testing like a pro in Bruno! 🧪🔥
+  
+  
+  
+}

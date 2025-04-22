@@ -1,0 +1,67 @@
+meta {
+  name: Instruction
+}
+
+docs {
+  # Challenge Overview 
+  
+  ## Instructions
+  
+  ### Step 1: Create a New Request
+  
+  1. Click on the **Collection** in your Bruno workspace.
+  2. Click on the **Context Menu** (...) and select **New Request**.
+  3. Name your request as `Your Name`.
+  4. Set the **Request URL** to `https://echo.usebruno.com`.
+  
+  ### Step 2: Set HTTP Method to POST
+  
+  1. In your new request, select the **POST** method from the dropdown next to the URL field.
+  
+  ### Step 3: Add JSON Body Data
+  
+  1. In the **Body** section, select **JSON** from the dropdown.
+  2. Add the following JSON data to the body of the request:
+  
+  ```json
+  {
+    "title": "Bruno",
+    "role": "Chief Joy Officer"
+  }
+  ```
+  
+  ### Step 4: Execute the Request
+  
+  Click on **->** to execute the request.
+  
+  You should receive the following response:
+  
+  ```json
+  {
+    "title": "Bruno",
+    "role": "Chief Joy Officer"
+  }
+  ```
+  
+  ### Step 5: Debugging with Console
+  
+  You can use the `console.log()` method to log the response. For example, add the following line inside the **Test Script** tab:
+  
+  ```javascript
+  console.log(res.getBody());
+  ```
+  
+  This will log the response body in the Console tab, so you can easily debug and inspect the output.
+  
+  ## 📌 Summary
+  
+  In this challenge, you learned how to:
+  
+  - ✅ Send a request using the **POST** method  
+  - ✅ Add **JSON data** to the request body  
+  - ✅ Use `console.log()` to debug your requests via the **Console** tab
+  
+  Great job completing this challenge! 🎉
+  
+  
+}

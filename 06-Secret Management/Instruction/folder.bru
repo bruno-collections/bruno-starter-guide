@@ -1,0 +1,65 @@
+meta {
+  name: Instruction
+}
+
+docs {
+  ### 📘 Challenge Overview
+  
+  In this challenge, you’ll learn how to manage **local secrets securely** using `.env` files in Bruno. You’ll store a secret key in the `.env` file and access it in your request body using `{{process.env}}`.
+  
+  Let’s get started! 🔐
+  
+  ---
+  
+  ## 🛠️ Instructions
+  
+  ### 📁 Step 1: Create a `.env` File
+  
+  1. Open your code editor (e.g., **VS Code**).
+  2. Navigate to your **Bruno collection folder**.
+  3. Create a new file named `.env` at the **root level** of the collection.
+  4. Add the following variable inside the `.env` file:
+  
+  ```bash
+    my_secret_key=1234567890
+  ```
+  
+  > **Always add the `.env` file to your `.gitignore`** to ensure secrets are not accidentally pushed to version control.
+  
+  ---
+  
+  ### ✉️ Step 2: Create a Request in Bruno
+  
+  1. Open **Bruno** and go to collection.
+  2. Create a new request and name it: `env-var`.
+  3. Set the method to `POST`.
+  4. Use the following URL:
+  
+  ```js
+      https://echo.usebruno.com
+  ```
+  5. Go to the **Body** tab.
+  6. Select `JSON` from the dropdown.
+  7. Add the following body:
+  
+  ```json
+  {
+    "secret": "{{process.env.my_secret_key}}"
+  }
+  ```
+  ### Step 3: Run and Observe
+    - Execute the request.
+    - You should receive a response with your secret value in the response tab.
+    
+  ## 🎉 Summary
+  In this challenge, you learned how to:
+  
+  - ✅ Create and use a .env file for secure secret storage
+  - ✅ Access secrets in requests using `{{process.env}}`
+  - ✅ Follow Bruno’s local-first security practice
+  
+  You're one step closer to mastering secure API testing with Bruno! 🔐⚙️
+  
+  
+  
+}

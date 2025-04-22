@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "name": "Bruno Starter Guide",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.004055976867675781,
+  "filesCount": 12,
+  "presets": {
+    "requestType": "http",
+    "requestUrl": "https://echo.usebruno.com"
+  }
+}

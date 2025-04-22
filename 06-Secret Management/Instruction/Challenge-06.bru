@@ -1,0 +1,25 @@
+meta {
+  name: Challenge-06
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://echo.usebruno.com
+  body: json
+  auth: bearer
+}
+
+headers {
+  secret: 
+}
+
+auth:bearer {
+  token: {{process.env.my_secret_key}}
+}
+
+body:json {
+  {
+    "data": "{{process.env.my_secret_key}}"
+  }
+}

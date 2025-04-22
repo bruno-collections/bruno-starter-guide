@@ -1,0 +1,23 @@
+meta {
+  name: Challenge-05
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://newsapi.org/v2/everything?q=tesla&from=2025-03-22&sortBy=publishedAt
+  body: none
+  auth: apikey
+}
+
+params:query {
+  q: tesla
+  from: 2025-03-22
+  sortBy: publishedAt
+}
+
+auth:apikey {
+  key: apiKey
+  value: {{news-api-key}}
+  placement: queryparams
+}
