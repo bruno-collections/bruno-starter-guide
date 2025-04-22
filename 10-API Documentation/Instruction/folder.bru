@@ -1,3 +1,94 @@
 meta {
   name: Instruction
 }
+
+docs {
+  # Challenge Overview 
+  
+  
+  
+  ## 📁 Challenge Setup
+  
+  - Create a new collection called `doc-demo`
+  
+  - Inside it, create a folder: `user-endpoints`
+  
+  - Inside the folder, create a request: `Echo Bruno`
+  
+  - Select method: `POST` and URL: `https://echo.usebruno.com`
+  
+  
+  ## ✍️ Instructions
+  
+  ### Step 1: Add Collection-Level Docs
+  
+  1. Right-click on the doc-demo collection → Edit Docs
+  
+  2. Add this sample Markdown:
+  
+  ```md
+  # 🧾 API Collection - doc-demo
+  
+  This collection includes user-related API endpoints.
+  
+  ## 🧰 Technologies Used
+  - API Client: Bruno
+  - Language: JavaScript (for scripting)
+  - Docs Format: Markdown
+  ```
+  
+  ### Step 2: Add Folder-Level Docs
+  
+  1. Right-click on the user-endpoints folder.
+  2. Select setting and Go to Docs tab from 
+  
+  Add:
+  
+  ```md
+  
+  # 👤 User Endpoints
+  
+  This folder includes requests related to user management.
+  
+  - Get all users
+  - Create new user
+  - Update user
+  ```
+  
+  ### Step 3: Add Request-Level Docs
+  
+  1. Click on the Get Users request.
+  2. Go to `Docs` section.
+  
+  Add:
+  
+  ```md
+  # 📥 Get Users
+  
+  **Method**: GET  
+  **URL**: `https://reqres.in/api/users`
+  
+  ## 🔍 Description
+  Fetches a list of users from the server.
+  
+  ## 📤 Response
+  Returns a paginated list of user objects.
+  
+  ## Example Response
+  
+  ```json
+  {
+    "page": 1,
+    "data": [
+      { "id": 1, "name": "John Doe" }
+    ]
+  }
+  ```
+  ## ✅ Summary
+  
+  In this challenge, you:
+  
+  - Learned how to add docs at collection, folder, and request levels
+  - Used Markdown to write beautiful API docs
+  - Made your Bruno collection more collaborative and readable! ✨
+}
