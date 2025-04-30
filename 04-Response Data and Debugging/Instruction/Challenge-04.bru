@@ -6,20 +6,13 @@ meta {
 
 post {
   url: https://echo.usebruno.com
-  body: json
+  body: none
   auth: inherit
 }
 
-body:json {
-  {
-    "title": "Bruno",
-    "role": "chief Joy Officer"
-    
-  }
-}
-
 script:pre-request {
-  
-  console.log(req.getUrl()
-  )
+  req.setBody({
+     "name": "Bruno",
+     "role": "Chief Joy Officer"
+     })
 }

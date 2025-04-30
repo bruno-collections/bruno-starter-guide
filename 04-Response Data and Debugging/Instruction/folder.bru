@@ -7,8 +7,6 @@ docs {
   
   In the previous challenge, you sent a `POST` request and got a JSON response using Bruno’s echo server.
   
-  Now let’s explore how you can **log and inspect** the request and response using the **Console** tab and DevTools.
-  
   ---
   
   ## Instructions
@@ -24,13 +22,15 @@ docs {
   3. Add the following code:
   
   ```js
-     console.log(req.getUrl());
+     req.setBody({
+     "name": "Bruno",
+     "role": "Chief Joy Officer"
+     })
   ``` 
   
-  4. Open the **Console Tab** (`Ctrl + I` or click on **Console** from the context menu).
   5. Click **->** to execute the request.
   
-  🔍 You should see the **URL** of your request logged in the console!
+  🔍 You should see the the data we sent in your response tab.
   
   ---
   
@@ -52,11 +52,9 @@ docs {
   ## 📌 Summary
   In this challenge, you learned how to:
   
-  ✅ Log request URL using req.getUrl() in Pre Script
+  ✅ How to set request body using req.setBody() in the pre-script
   
-  ✅ Log response body using res.getBody() in Test Script
-  
-  ✅ Use Bruno’s Console and DevTools for effective debugging
+  ✅ How to res object in post-script
   
   Keep experimenting and have fun with the logs! 🎮
   
