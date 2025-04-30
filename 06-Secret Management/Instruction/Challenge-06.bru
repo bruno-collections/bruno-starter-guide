@@ -5,21 +5,11 @@ meta {
 }
 
 post {
-  url: https://echo.usebruno.com
+  url: 
   body: json
   auth: bearer
 }
 
-headers {
-  secret: 
-}
-
 auth:bearer {
   token: {{process.env.my_secret_key}}
-}
-
-body:json {
-  {
-    "data": "{{process.env.my_secret_key}}"
-  }
 }

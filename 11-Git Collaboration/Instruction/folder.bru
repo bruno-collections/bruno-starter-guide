@@ -3,68 +3,87 @@ meta {
 }
 
 docs {
-  # 📝 Bruno Git Collaboration 
+  # 🧑‍💻 Git Collaboration with Bruno
   
-  ## 🎯 Challenge Overview
+  Learn how to use Git with Bruno collections for version control and collaboration.
   
-  Learn how to push your Bruno collection to a GitHub repository using Bruno's built-in Git UI.
+  ## Step 1: Create a New Collection
   
-  ## 📋 Step-by-Step Instructions
+  1. Open Bruno
+  2. Create a new collection named `git-collaboration`
+  3. This will be your workspace for this challenge
   
-  ### 📁 Step 1: Create a New Collection
+  ## Step 2: Initialize Git (Choose your method)
   
-  1. Launch Bruno application
-  2. Create a new collection named: `Bruno Git Collaboration`
-  3. Inside the collection, create a new request named: `echo-bruno`
-  4. Configure the request:
-     - Method: `POST`
-     - URL: `https://echo.usebruno.com`
+  ### Option A: Using Bruno UI (Paid Plan)
+  1. Click the Git icon near the Safe Mode toggle
+  2. Select "Initialize Git Repository"
+  3. Bruno initialize a Git repo inside the collection folder
   
-  ### 🔄 Step 2: Initialize Git Repository
+  ### Option B: Using CLI (Free Plan Compatible)
+  ```bash
+  cd path/to/your/bruno-collection
+  git init
+  ```
   
-  1. Locate and click the Git icon (adjacent to the Safe Mode toggle)
-  2. It will Initialize your collection.
-  3. This action creates a local Git repository within your collection directory
+  > [!NOTE]
+  > Bruno collections are stored as plain files, so Git works naturally with them.
   
-  ### ✅ Step 3: Commit Your Changes
+  ## Step 3: Commit Changes
   
-  1. Make modifications to your request (e.g., add parameters, headers, or comments)
-  2. Click the Git icon and select **Git UI**
-  3. Stage your changes by clicking the add (+) button
-  4. Enter a descriptive commit message, for example:
+  ### Using Bruno UI
+  1. Make edits (e.g., add headers, body, etc.)
+  2. Open the Git panel via the Git icon -> Git UI.
+  3. Stage changes with the + icon
+  4. Enter a commit message:
      ```
      Initial commit of Bruno Git Collaboration collection
      ```
-  5. Click the Commit button to save your changes
+  5. Click Commit
   
-  ### 🌐 Step 4: Set Up GitHub Repository
+  ### Using CLI
+  ```bash
+  git add .
+  git commit -m "Initial commit of Bruno Git Collaboration collection"
+  ```
   
-  1. Log in to your GitHub account
-  2. Create a new repository:
-     - Click "New repository"
-     - Name it (e.g., `bruno-git-collab`)
-     - Keep it public or private based on your preference
-  3. Copy the repository's `HTTPS URL` (e.g., `https://github.com/yourusername/bruno-git-collab.git`)
+  ## Step 4: Create GitHub Repository
   
-  ### 🔄 Step 5: Configure Remote and Push
+  1. Go to GitHub and log in
+  2. Click New Repository
+  3. Name it `bruno-git-collab` (or similar)
+  4. Choose visibility: public or private
+  5. Click Create Repository
+  6. Copy the HTTPS URL:
+     ```
+     https://github.com/yourusername/bruno-git-collab.git
+     ```
   
-  In Bruno's Git panel:
+  ## Step 5: Add Remote and Push
   
-  1. Navigate to Remotes > Add Remote
-  2. Configure the remote:
-     - Name: `origin`
-     - URL: Paste your GitHub repository URL
-  3. Click Push in the Git panel to upload your collection
+  ### Using Bruno UI (Paid Plan)
+  1. In Bruno's Git panel, go to Remotes > Add Remote
+  2. Name: `origin`
+  3. URL: Paste your GitHub URL
+  4. Click Push to upload your collection
   
-  ## 🎉 Summary
+  ### Using CLI (Free Plan Compatible)
+  ```bash
+  git remote add origin https://github.com/yourusername/bruno-git-collab.git
+  git branch -M main
+  git push -u origin main
+  ```
   
-  In this guide, you've successfully:
+  ## Summary
   
-  - Created and configured a Bruno collection
-  - Initialized Git version control
-  - Committed your changes
-  - Connected to a GitHub repository
-  - Pushed your collection to GitHub
+  In this challenge, you successfully:
   
-  Happy API development and collaboration! 🎯
+  - ✅ Created a new Bruno collection
+  - ✅ Initialized Git using UI or CLI
+  - ✅ Committed and pushed changes to GitHub
+  - ✅ Learned how to collaborate using Bruno + Git
+  
+  Whether you're working solo or as part of a team, Bruno's Git integration supports flexible workflows to match your tools and license.
+  
+  Happy collaborating! 🚀
 }
