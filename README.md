@@ -2,7 +2,7 @@
   <img src="./assets/logo-transparent.png" width="100" alt="Bruno Logo">
 </p>
 
-<h1 align="center">🚀 Bruno Starter Guide</h1>
+<h1 align="center"> Bruno Starter Guide</h1>
 
 A practical, hands-on guide to mastering Bruno - the fast, Git-friendly, open-source API client. This guide is designed to take you from beginner to proficient in using Bruno through 13 progressive challenges.
 
