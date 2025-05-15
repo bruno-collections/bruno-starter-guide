@@ -1,0 +1,33 @@
+meta {
+  name: echo-script
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base-url}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "task id": 8,
+    "title": "Assert and Testing",
+    "you_love_bruno": true
+  }
+}
+
+assert {
+  res.status: eq 200
+}
+
+tests {
+  test("Check response body contains 'title' property", function () {
+    expect(res.getBody()).to.have.property("title");
+  });
+  
+  test("You must love Bruno! 🧡", function () {
+    expect(res.getBody().you_love_bruno).to.be.true;
+  });
+}

@@ -1,22 +1,43 @@
 meta {
   name: 02-Environment and Collection
+  seq: 3
 }
 
 docs {
   # 02 - Environment and Collection
   
-  In this challenge, you'll learn how to use **environment variables** in Bruno. You'll be able to create and manage different environments to test your APIs under various conditions. This is a crucial step in making your API testing more flexible and efficient.
+  In this challenge, you'll learn how to use **environment variables** in Bruno. You'll be able to create and manage different environments to test your APIs under various conditions. 
   
   By the end of this challenge, you'll understand how to:
   
   - Set up different environments at the collection level.
   - Use environment variables to make your API tests dynamic.
   
-  ---
+  ### Challenge Overview
   
-  ## 📘 How to Follow This Challenge
+  You will create environment variables at collection level and use them in request.
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-02` file to test the environment variables.
+  ### Instructions
   
+  #### Creating Environments
+  
+  1. Navigate to the **Environment** section (top right).
+  2. Click on **No Environment** and select **Configure**.
+  3. Click **Create Environment** and name it `echo-bruno`.
+  4. Under your `echo-bruno` environment, click **Add Variable**.
+  5. Enter the variable name as `base-url` and set the value to `https://echo.usebruno.com`
+  
+  🎉 **Congratulations!** You've successfully created an environment for your collection.
+  
+  > **Note:** Environment variables are specific to the **collection level** and can be reused across requests and folders within that collection.
+  
+  #### Using Environments
+  
+  1. Create a `New Request` inside `Environment and Collection` folder.
+  2. Name it as `echo-bruno-env` and select post method.
+  3. Use `{{base-url}}` as request URL and ensure that you have selected the `echo bruno` environment from the environment dropdown.
+  4.Execute the request
+  
+  ### 📌 Summary  
+  In this challenge, you created an environment (`echo-bruno`) and used an environment variable (`base-url`) in your API request. You've now set up a flexible environment system.
 }

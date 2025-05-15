@@ -1,23 +1,69 @@
 meta {
   name: 12-OpenAPI Spec
+  seq: 13
 }
 
 docs {
-  ## 11 - Working with OpenAPI Specification
+  # 12 - Working with OpenAPI Specification
   
   Welcome to Challenge 12 of the Bruno Starter Guide!
   
   In this challenge, you'll learn how to view and import OpenAPI Specifications (OAS) into Bruno as a collection and view OAS files.
   
-  ## 🎯 What You’ll Learn
+  ### 🎯 What You'll Learn
   - ✅ How to import an OpenAPI V3 spec into Bruno
-  
   - ✅ View and explore an API definition as a Bruno collection
-  
   - ✅ Understand how Bruno converts OpenAPI endpoints into testable requests
   
-  ## 📘 How to Follow This Challenge
+  ### Challenge Overview
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-12` file.
+  OpenAPI Specification (formerly Swagger) is a standard format for describing REST APIs. Bruno has excellent support for working with OpenAPI specs, allowing you to import them as collections.
+  
+  ### Instructions
+  
+  #### Step 1: Find an OpenAPI Specification
+  
+  You can use any OpenAPI spec, but for this challenge, we recommend:
+  
+  - The Petstore API: [https://petstore.swagger.io/v2/swagger.json](https://petstore.swagger.io/v2/swagger.json)
+  - Or download a sample OpenAPI spec from [https://github.com/OAI/OpenAPI-Specification/tree/main/examples](https://github.com/OAI/OpenAPI-Specification/tree/main/examples)
+  
+  #### Step 2: Import the OpenAPI Spec
+  
+  1. Open Bruno
+  2. Click on the context menu (three dots) next to the Bruno logo
+  3. Select "Import"
+  4. Choose "OpenAPI"
+  5. Browse for your OpenAPI spec file or paste the URL
+  6. Follow the import wizard
+  7. Choose a location to save the collection
+  
+  #### Step 3: Explore the Imported Collection
+  
+  After importing, you'll see:
+  
+  1. A new collection created with the API name
+  2. Folders organized by resource/tag
+  3. Requests for each endpoint with:
+     - Correct paths
+     - Sample parameters
+     - Authentication methods
+     - Request bodies
+  
+  #### Step 4: Test an Endpoint
+  
+  1. Navigate through the imported collection
+  2. Select an endpoint (e.g., GET /pets)
+  3. Review request details that Bruno has pre-configured
+  4. Click Send to test the endpoint
+  
+  ### 📌 Summary
+  
+  In this challenge, you:
+  
+  - ✅ Imported an OpenAPI specification into Bruno
+  - ✅ Explored how Bruno organizes API definitions
+  - ✅ Tested API endpoints directly from the imported spec
+  
+  Bruno's OpenAPI import feature helps you quickly start testing APIs without manually creating each request, saving time and ensuring accuracy.
 }

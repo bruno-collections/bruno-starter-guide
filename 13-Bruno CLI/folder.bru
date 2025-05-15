@@ -1,40 +1,73 @@
 meta {
   name: 13-Bruno CLI
+  seq: 14
 }
 
 docs {
   # 13 - Bruno CLI
   
-  Welcome to Challenge 13 — Let’s run your API tests from the terminal like a real automation pro!
+  Welcome to Challenge 13 — Let's run your API tests from the terminal like a real automation pro!
   
   Bruno CLI lets you run your collections directly from the command line, perfect for CI/CD pipelines and automated workflows.
   
-  
-  ## What You’ll Learn
+  ### What You'll Learn
   
   - ✅ Install and use the Bruno CLI tool
-  
   - ✅ Run requests and collections via terminal
-  
   - ✅ Use environments in CLI runs
-  
   - ✅ Validate status codes directly from the command line
   
-  --- 
-  
-  ## Prerequisites
+  ### Prerequisites
   Make sure you have:
   
   1. Node.js installed
-  
   2. A Bruno collection ready with at least one request
   
-  ## 📘 How to Follow This Challenge
+  ### 📝 Challenge Overview
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-13` file.
+  In this challenge, you'll:
   
+  - Install the Bruno CLI tool
+  - Create an environment for your collection
+  - Run the request using CLI and verify the output
   
+  Let's get started!
   
+  ### Instructions
   
+  #### Step 1: Install Bruno CLI
+  
+  Open your terminal and run:
+  
+  ```bash
+   npm install -g @usebruno/cli
+  ```
+  
+  #### 📁 Step 2: Navigate to Your Bruno Collection
+  
+  Use cd to go into the root folder of your Bruno collection:
+  
+  ```bash
+   cd path/to/bruno-starter-guide
+  ```
+  
+  #### 🚀 Step 3: Run Collection with Environment
+  
+  In the terminal, run the following:
+  
+  ```bash
+  bru run --env echo-bruno
+  ```
+  
+  ✅ Your requests will run, and you should see a `200` OK response printed in the console.
+  
+  ### 📌 Summary
+  In this challenge, you:
+  
+  - Installed Bruno CLI using npm
+  - Configured an environment
+  - Ran your collection through the terminal
+  - Verified successful API execution via status codes
+  
+  🎉 You're now ready to integrate Bruno into automation and CI workflows like a boss!
 }

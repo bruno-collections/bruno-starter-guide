@@ -1,22 +1,49 @@
 meta {
   name: 04-Response Data and Debugging
+  seq: 5
 }
 
 docs {
   # 04 - Response Data & Debugging
   
   Welcome to **Day 4** of the Bruno Starter Guide!  
-  Today, you're going to level up your testing game using Bruno’s `req` object.
+  Today, you're going to level up your testing game using Bruno's `req` object.
   
-  ---
+  ### 🎯 What You'll Learn
   
-  ## 🎯 What You’ll Learn
-  
-  - 🧠 How to access and understand the `req` (request)  object.
+  - 🧠 How to access and understand the `req` (request) object.
   - 📬 How to view and understand API responses in the **Response** tab
   
-  ## 📘 How to Follow This Challenge
+  ### Challenge Overview
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-04` file
+  In the previous challenge, you sent a `POST` request and got a JSON response using Bruno's echo server.
+  
+  ### Instructions
+  
+  > 💡 **Tip:**  
+  > - The `req` object is only available in the **Pre-Script** section.  
+  
+  #### ✅ Step 1: Use `req` object in Pre-Script
+  
+  1. Use same request from `03-Send Request`.
+  2. Go to the **Pre Script** section.
+  3. Add the following code:
+  
+  ```js
+     req.setBody({
+     "name": "Bruno Starter Guide",
+     "task id": "04"
+     })
+  ``` 
+  
+  4. Click **->** to execute the request.
+  
+  🔍 You should see the the data we sent in your response tab.
+  
+  ### 📌 Summary
+  In this challenge, you learned how to:
+  
+  ✅ How to set request body using `req.setBody()` in the pre-script
+  
+  Keep experimenting and have fun with the `req` object! 🎮
 }

@@ -1,0 +1,25 @@
+meta {
+  name: bruno
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base-url}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Bruno",
+    "role": "Chief Joy Officer"
+  }
+}
+
+script:pre-request {
+  req.setBody({
+     "name": "Bruno Starter Guide",
+     "task id": "04"
+  })
+}

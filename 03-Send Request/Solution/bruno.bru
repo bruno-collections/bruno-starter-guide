@@ -1,0 +1,18 @@
+meta {
+  name: bruno
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base-url}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Bruno",
+    "role": "Chief Joy Officer"
+  }
+}

@@ -1,5 +1,6 @@
 meta {
   name: 05-Authorization
+  seq: 6
 }
 
 docs {
@@ -8,18 +9,74 @@ docs {
   Welcome to **Day 5** of the Bruno Starter Guide!  
   Today, you'll learn how to use **API Key Authentication** to access secure APIs — specifically the **News API**.
   
-  ---
-  
-  ## 🎯 What You’ll Learn
+  ### 🎯 What You'll Learn
   
   - 🌐 How to get and use an **API key** for authentication
   - 🔑 Storing API keys securely using **Environment Variables**
   - 🔎 Sending authenticated requests using **Query Params** in Bruno
   
-  --- 
+  ### Challenge Overview
   
-  ## 📘 How to Follow This Challenge
+  #### 📰 What is News API?
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `challenge-05` file.
+  **News API** is a simple HTTP API for searching and retrieving live articles from all over the web.
+  
+  - **Website:** [https://newsapi.org](https://newsapi.org)
+  - **Use case:** Pull breaking news headlines or search through millions of articles in real time.
+  
+  #### 🗝️ Step 1: Get Your API Key
+  
+  1. Go to [https://newsapi.org](https://newsapi.org)
+  2. Sign up or log in to your account.
+  3. From your dashboard, **copy your API Key**.
+  
+  #### 🔐 Step 2: Store the API Key as an Environment Variable
+  
+  To keep your API key secure and reusable:
+  
+  1. Go to Bruno Starter Guide collection.
+  2. Navigate to the **Environment Variables** (top right).
+  3. Configure new enviroment called **NEWS_API**
+  4. Click on **Add Variable**.
+  5. Add:
+  
+     - **Key:** `news-api-key`
+     - **Value:** *(paste your News API key)*
+  
+  > 🛡️ Tip: Avoid hardcoding your API key directly in requests—use variables instead!
+  
+  #### 🔄 Step 3: Create Request Using the API Key
+  
+  Let's send a request to News API to get news articles about Tesla.
+  
+  1. Create a new request named `News Articles`.
+  2. Set the **Method** to `GET`.
+  3. Use the following URL:
+   ```bash  
+     https://newsapi.org/v2/everything?q=tesla&from=2025-03-22&sortBy=publishedAt
+   ```
+  4. Go to the **Auth** tab of your request.
+  5. Choose **API Key** from the dropdown.
+  6. Fill in the following:
+     - **Key:** `apiKey`
+     - **Value:** `{{news-api-key}}`
+  7. Set the **Add To** option to: `Query Params`
+  
+  ✅ Bruno will now append your API key to the URL as a query parameter.
+  
+  ### 🚀 Step 5: Execute the Request
+  
+  Click **Send** to run the request.
+  
+  You should receive a JSON response with a list of news articles related to **Tesla**.
+  
+  ### 📌 Summary
+  
+  In this challenge, you:
+  
+  - ✅ Got an API key from NewsAPI.org
+  - ✅ Configured a NEWS_API environment in Bruno
+  - ✅ Stored your API key as an Environment Variable
+  - ✅ Used Bruno's API Key Auth tab with Query Params
+  - ✅ Retrieved and viewed real-world news data
 }

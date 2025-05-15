@@ -1,5 +1,6 @@
 meta {
   name: 07-Script
+  seq: 8
 }
 
 docs {
@@ -9,19 +10,78 @@ docs {
   
   In this challenge, you'll learn how to use scripts in Bruno to dynamically set request data like method, headers, body — and log responses.
   
-  ---
-  
-  ## 🎯 What You’ll Learn
+  ### 🎯 What You'll Learn
   
   By completing this challenge, you'll:
   
   - ✅ Learn how to use the req and res objects
-  - ✅ Write basic scripts using Bruno’s Pre-Script and Post-Script tabs
+  - ✅ Write basic scripts using Bruno's Pre-Script and Post-Script tabs
   - ✅ Understand how scripting gives you full control over request execution
   
+  ### Challenge Overview
   
-  ## 📘 How to Follow This Challenge
+  We'll set up the request dynamically using JavaScript in the `Pre-Script`, and then log the response using `Post-Script`.
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-07` file.
+  ### Instruction 
+  
+  #### Step 1: Create a Request
+  
+  1. Right click on `Script` folder and create request `echo-script`.
+  
+  2. Select `POST` as method and `{{base-url}}` as request URL.
+  
+  #### Step 2: Pre-Script - Set Up the Request
+  
+  1. Go to the request -> Script tab
+  2. Paste the following code:
+  
+  ```javascript
+  req.setBody({
+    "title": "Bruno Starter Guide",
+    "id": "07"
+  });
+  
+  req.setHeaders("Content-Type: application/json");
+  
+  req.setMethod("POST");
+  ```
+  
+  ##### ✅ This script:
+  
+  - Sets the request method to POST
+  
+  - Sets the content type header
+  
+  - Sets a JSON body dynamically
+  
+  #### Step 3: Post-Script — Log the Response
+  
+  1. Go to the Script tab → Select Post-Script
+  2. Paste the following code:
+  ```js
+  console.log(res.body);
+  ```
+  
+  #### Step 4: Run and Observe
+  - Execute the request
+  - Open Console (via context menu(...) or press Ctrl + I)
+  
+  You should see the following logged:
+  
+  ```json
+  {
+    "title": "Bruno Starter Guide",
+    "id": "07"
+  }
+  ```
+  
+  ### 📌 Summary
+  
+  In this challenge, you learned how to:
+  
+  - Write Pre-Scripts to dynamically set method, headers, and body
+  
+  - Use Post-Scripts to log and debug responses
+  
+  - Leverage Bruno's scripting engine to make your API testing more flexible
 }

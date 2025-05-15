@@ -1,31 +1,72 @@
 meta {
   name: 06-Secret Management
+  seq: 7
 }
 
 docs {
-  # 06 - Secret Management with `.env`
+  # 06 - Secret Management
   
   Welcome to Day 6 of the Bruno Starter Guide!
   
   Bruno is a local-first API client, and one of its key features is the ability to safely manage secrets like API keys, tokens, and passwords—directly through environment variables.
   
-  In this challenge, you’ll learn how to mark sensitive values as secrets in Bruno environments. This ensures that these values are handled securely and never logged or exposed accidentally.
+  In this challenge, you'll learn how to mark sensitive values as secrets in Bruno environments. This ensures that these values are handled securely and never logged or exposed accidentally.
   
-  ---
-  
-  ## 🎯 What You’ll Learn
+  ### 🎯 What You'll Learn
   
   - 🔐 How to mark variables as secrets in Bruno environments
   
   - 🛡️ How secrets behave securely in Bruno (e.g., redacted in logs)
   
-  - 💡 (Optional) How to use a .env file for secret management
+  ### Secret Management
   
-  --- 
-  ## 📘 How to Follow This Challenge
+  ### 📘 Challenge Overview
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-06` file.
+  ### Instructions
   
+  #### Step 1: Mark Environment Variable as Secret
   
+  1. Go to environment variables (top-right) and select `echo-bruno`.
+  
+  2. Add a new variable:
+  
+  ```json
+    Key: my_secret_key
+    Value: Bruno
+  ```
+  
+  3. Enable the "Secret" checkbox next to the variable.
+  
+  Bruno will now treat this value as a secret—redacting it from logs and previews to protect sensitive data.
+  
+  #### ✉️ Step 2: Use the Secret Variable in a Request
+  
+  1. Create a request named: `env-secret`.
+  
+  2. Set the method to `POST`.
+  
+  3. Enter `{{base-url}}` URL placeholder and select `echo bruno` as environment.
+  
+  4. Go to the `Body` tab and select `JSON`.
+  
+  5. Add this JSON:
+  
+  ```json
+  {
+    "secret": "{{my_secret_key}}"
+  }
+  ```
+  
+  6. Run the request.
+  
+  You'll see the secret value reflected in the response—but it remains hidden in logs and previews for safety.
+  
+  ### 📌 Summary
+  In this challenge, you learned how to:
+  
+  - ✅ Mark environment variables as secrets in Bruno
+  
+  - ✅ Use secret variables securely in requests
+  
+  You're one step closer to mastering secure and private API testing with Bruno! 🔐🚀
 }

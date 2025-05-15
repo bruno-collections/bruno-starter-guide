@@ -1,0 +1,30 @@
+meta {
+  name: echo-script
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base-url}}
+  body: none
+  auth: inherit
+}
+
+script:pre-request {
+  req.setBody({
+    "title": "Bruno Starter Guide",
+    "id": "07"
+  })
+  
+  req.setHeaders("Content-Type: application/json")
+  
+  req.setMethod("POST")
+  
+  
+}
+
+script:post-response {
+  console.log(res.body);
+  
+  console.log(res.status);
+}

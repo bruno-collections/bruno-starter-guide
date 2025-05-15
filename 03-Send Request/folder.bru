@@ -1,11 +1,12 @@
 meta {
   name: 03-Send Request
+  seq: 4
 }
 
 docs {
-  # 03 - Send Request
+  # 03 - Sending API Requests with JSON Data
   
-  In the previous challenge, you learned how to create a request. In this challenge, you'll learn how to **send a request**, select the appropriate **HTTP methods**, and send data through the body.
+  In the previous challenge, you learned how to create a request. In this challenge, you'll learn how to **send a request**, select the appropriate **HTTP methods**, and send JSON data through the body.
   
   By the end of this challenge, you'll be able to:
   
@@ -13,10 +14,46 @@ docs {
   - Add JSON data to the request body.
   - Send the request and view the response.
   
-  ---
+  ### Challenge Overview 
   
-  ## 📘 How to Follow This Challenge
+  ### Instructions
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-03` file to send a request using the `POST` method.
+  #### Step 1: Create a New Request
+  
+  1. Create a **New Request** inside `Send Request` folder.
+  2. Name request as `your-name` and select `POST` as method.
+  3. Set the **Request URL** to `{{base-url}}` and make sure to select `echo-bruno` as environment.
+  
+  #### Step 3: Add JSON Body Data
+  
+  1. Go to request **Body** section, select **JSON** from the dropdown.
+  2. Add the following JSON data to the body of the request:
+  
+  ```json
+  {
+    "title": "Bruno",
+    "role": "Chief Joy Officer"
+  }
+  ```
+  
+  #### Step 4: Execute the Request
+  
+  Click on **->** to execute the request.
+  
+  You should receive the following response:
+  
+  ```json
+  {
+    "title": "Bruno",
+    "role": "Chief Joy Officer"
+  }
+  ```
+  
+  ### 📌 Summary
+  
+  In this challenge, you learned how to:
+  
+  - ✅ Send a request using the **POST** method  
+  - ✅ Add **JSON data** to the request body  
+  
 }

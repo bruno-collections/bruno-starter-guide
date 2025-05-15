@@ -1,5 +1,6 @@
 meta {
   name: 08-Assert and Testing
+  seq: 9
 }
 
 docs {
@@ -7,18 +8,81 @@ docs {
   
   Welcome to **Challenge 08** of the Bruno Starter Guide! 
   
-  In this challenge, you’ll explore how **assertions** and **test scripts** work in Bruno.
+  In this challenge, you'll explore how **assertions** and **test scripts** work in Bruno.
   
-  ---
+  ### 🎯 What You'll Learn
   
-  ## 🎯 What You’ll Learn
-  
-  - ✅ How to write assertions using Bruno’s **built-in expression UI**
+  - ✅ How to write assertions using Bruno's **built-in expression UI**
   - ✅ How to write custom **test scripts** using JavaScript and Chai
   - ✅ Understand the difference between Assertions and Test Scripts in Bruno
   
-  ## 📘 How to Follow This Challenge
+  ### Challenge Overview 
   
-  1. **Read the instructions** in the `Instructions` folder.
-  2. **Execute the steps** in the `Challenge-08` file.
+  ### Instructions
+  
+  #### 📁 Step 1: Create a Request
+  
+  1. Right click on `Assert and Testing` folder and create request called `echo-script`.
+  
+  2. Select `POST` as method and `{{base-url}}` as request URL.
+  
+  3. Make sure you have selected `echo-bruno` as collection environment.
+  
+  3. Go to the **Body** tab.
+  
+  4. Select `JSON` and paste the following payload:
+  
+  ```json
+  {
+    "task id": 8,
+    "title": "Assert and Testing",
+    "you_love_bruno": true
+  }
+  ```
+  
+  #### Step 2: Add an Assertion
+  
+  Bruno lets you create basic assertions without writing code.
+  
+  - Go to the Assert tab.
+  - Add following details:
+  
+  | Expr        | Operator | Value |
+  |-------------|----------|-------|
+  | res.status  | equals   | 200   |
+  
+  
+  ✅ This assertion will check that the response status code is 200.
+  
+  #### Step 3: Add a Test Script
+  
+  - Go to the `Test` tab.
+  
+  - Add the following code:
+  
+  ```js
+  test("Check response body contains 'title' property", function () {
+    expect(res.getBody()).to.have.property("title");
+  });
+  
+  test("You must love Bruno! 🧡", function () {
+    expect(res.getBody().you_love_bruno).to.be.true;
+  });
+  ```
+  
+  #### Step 4: Run the Request
+  - Execute the request.
+  
+  - Go to the `Test` section next to the `Timeline` tab to see both your assertion and test case results.
+  
+  You should see both tests passed! ✅
+  
+  ### 📌 Summary
+  In this challenge, you learned how to:
+  
+  - ✅ Use Bruno's built-in assertion UI
+  - ✅ Write custom test scripts
+  - ✅ Validate both status codes and response data programmatically
+  
+  You're officially testing like a pro in Bruno! 🔥
 }
