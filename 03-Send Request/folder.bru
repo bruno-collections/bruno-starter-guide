@@ -1,32 +1,39 @@
 meta {
-  name: 03-Send Request
-  seq: 4
+  name: Sending API Requests with JSON Data
+  seq: 1
 }
 
 docs {
   # 03 - Sending API Requests with JSON Data
   
-  In the previous challenge, you learned how to create a request. In this challenge, you'll learn how to **send a request**, select the appropriate **HTTP methods**, and send JSON data through the body.
+  In this challenge, you'll learn how to craft and send API requests with data payloads. You'll master selecting the appropriate HTTP methods and structuring JSON data in request bodies.
   
   By the end of this challenge, you'll be able to:
   
-  - Select an HTTP method (e.g., `POST`, `GET`).
-  - Add JSON data to the request body.
-  - Send the request and view the response.
+  - Select the right HTTP method for your API operations
+  - Structure and send JSON data in request bodies
+  - Execute requests and analyze responses
   
   ### Challenge Overview 
+  
+  In this hands-on exercise, you'll create a POST request that sends structured JSON data to an API endpoint and examine the response.
   
   ### Instructions
   
   #### Step 1: Create a New Request
   
-  1. Create a **New Request** inside `Send Request` folder.
-  2. Name request as `your-name` and select `POST` as method.
+  1. Click on the **Context Menu** (...) and select **New Request**.
+  2. Name your request as `Data Request`.
   3. Set the **Request URL** to `{{base-url}}` and make sure to select `echo-bruno` as environment.
+  
+  #### Step 2: Set HTTP Method to POST
+  
+  1. In your new request, select the **POST** method from the dropdown next to the URL field.
+  2. POST is used when you need to send data to create or update a resource on the server.
   
   #### Step 3: Add JSON Body Data
   
-  1. Go to request **Body** section, select **JSON** from the dropdown.
+  1. In the **Body** section, select **JSON** from the dropdown.
   2. Add the following JSON data to the body of the request:
   
   ```json
@@ -38,9 +45,9 @@ docs {
   
   #### Step 4: Execute the Request
   
-  Click on **->** to execute the request.
+  Click on **Send** (arrow button) to execute the request.
   
-  You should receive the following response:
+  You should receive the following response in the Response panel:
   
   ```json
   {
@@ -49,11 +56,16 @@ docs {
   }
   ```
   
+  This confirms that the echo server received your data correctly and returned it back to you.
+  
   ### 📌 Summary
   
   In this challenge, you learned how to:
   
-  - ✅ Send a request using the **POST** method  
-  - ✅ Add **JSON data** to the request body  
+  - ✅ Create and configure a POST request
+  - ✅ Structure JSON data in the request body
+  - ✅ Send data to an API endpoint
+  - ✅ Verify the data was received correctly
   
+  These skills form the foundation for working with most modern REST APIs that require data exchange.
 }
