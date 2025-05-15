@@ -1,6 +1,8 @@
 # 🚀 Bruno Starter Guide
 
-![Bruno Logo](https://www.usebruno.com/images/bruno-logo.svg)
+<p align="center">
+  <img src="./assets/logo-transparent.png" width="100" alt="Bruno Logo">
+</p>
 
 A practical, hands-on guide to mastering Bruno - the fast, Git-friendly, open-source API client. This guide is designed to take you from beginner to proficient in using Bruno through 13 progressive challenges.
 
