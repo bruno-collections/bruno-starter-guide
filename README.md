@@ -40,10 +40,9 @@ Before starting, please ensure you have:
 
 ## 🏁 Getting Started
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/bruno-starter-guide.git
-   ```
+1. Clone the repo or click the button below to automatically open it in Bruno!
+  
+[<img src="https://fetch.usebruno.com/button.svg" alt="Fetch in Bruno" style="width: 130px; height: 30px;" width="128" height="32">](https://fetch.usebruno.com?url=https%3A%2F%2Fgithub.com%2Fbruno-collections%2Fbruno-starter-guide "target=_blank rel=noopener noreferrer")
 
 2. Open Bruno and navigate to the cloned repository folder to open the collection.
 
