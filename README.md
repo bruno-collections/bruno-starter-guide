@@ -6,18 +6,6 @@
 
 A practical, hands-on guide to mastering Bruno - the fast, Git-friendly, open-source API client. This guide is designed to take you from beginner to proficient in using Bruno through 13 progressive challenges.
 
-## 📋 Table of Contents
-
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Challenge Overview](#challenge-overview)
-- [How to Use This Guide](#how-to-use-this-guide)
-- [Resources](#resources)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## 🌟 Introduction
 
 Bruno is a modern API client that offers an alternative to tools like Postman and Insomnia, with key advantages:
@@ -33,10 +21,9 @@ This guide provides a structured learning path with practical examples to help y
 
 Before starting, please ensure you have:
 
-- 🧑‍💻 Basic understanding of APIs and HTTP methods (GET, POST, PUT, DELETE)
-- 🔗 Familiarity with JSON data format
+- 🧑‍💻 Basic understanding of APIs
 - 🧰 [Bruno](https://www.usebruno.com/downloads) installed on your system
-- 💾 Git installed and configured (optional, recommended for collaboration challenges)
+- 💾 Git installed
 
 ## 🏁 Getting Started
 
@@ -47,23 +34,6 @@ Before starting, please ensure you have:
 2. Open Bruno and navigate to the cloned repository folder to open the collection.
 
 3. Begin with Challenge 01 in the `01-Basics` folder.
-
-## 📂 Project Structure
-
-This repository is organized as follows:
-
-```
-bruno-starter-guide/
-├── collection.bru          # Main collection information
-├── README.md               # This file - comprehensive documentation
-├── 01-Basics/              # Challenge 01 - Basic Bruno operations
-├── 02-Environment and Collection/ # Challenge 02 - Environment variables
-├── 03-Send Request/        # Challenge 03 - Sending requests with data
-...
-└── 13-Bruno CLI/           # Challenge 13 - Using Bruno's CLI features
-```
-
-Each challenge folder contains a `folder.bru` file with detailed documentation and a `Solution` folder with completed examples.
 
 ## 🧩 Challenge Overview
 
@@ -85,22 +55,10 @@ This guide covers the following topics across 13 progressive challenges:
 
 ## 📚 How to Use This Guide
 
-Each challenge is designed to build upon skills learned in previous challenges:
-
-1. **Read the Docs**
-   - Open the numbered folder (e.g., `01-Basics`)
-   - View the documentation in the `folder.bru` file (Docs tab)
-
-2. **Follow the Instructions**
-   - Complete each step as described in the challenge
-   - Create requests, environments, and scripts as instructed
-
-3. **Check the Solution**
-   - Compare your work with the provided solution in the challenge's `Solution` folder
-
-4. **Track Your Progress**
-   - Move sequentially through challenges 01-13
-   - Each challenge typically takes 10-15 minutes to complete
+- Visit [Bruno Starter Guide](http://docs.usebruno.com/advanced-guides/starter-guide) in the Advanced Guides section of Bruno docs
+- Follow the instructions from the official documentation
+- Or browse docs from each challenge folder's docs tab
+- Complete challenges to master API testing with Bruno
 
 ## 🔗 Resources
 
