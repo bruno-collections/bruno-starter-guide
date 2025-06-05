@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo-transparent.png" width="100" alt="Bruno Logo">
+  <img src="./logo-transparent.png" width="100" alt="Bruno Logo">
 </p>
 
 <h1 align="center"> Bruno Starter Guide</h1>
