@@ -1,0 +1,4 @@
+name: local
+variables:
+  - name: base-url
+    value: https://echo.usebruno.com

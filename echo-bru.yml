@@ -1,0 +1,43 @@
+info:
+  name: echo-bru
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base-url}}"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Bruno",
+        "role": "Loved by developers. Built for developers."
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        req.setBody({
+          "title":"Bruno",
+          "msg":"I love opensource devtools"
+        })
+    - type: tests
+      code: |-
+        test("body has title", function () {
+          expect(res.getBody()).to.have.property("title");
+        });
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "200"
+    - expression: res.body.title
+      operator: contains
+      value: Bruno
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
