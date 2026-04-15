@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="logo-transparent.png" alt="Bruno Starter Guide" width="160" />
-</p>
-
 # Bruno Starter Guide
 
 Bruno is an **open-source**, **Git-friendly**, **local-first** API client. This repository is the companion **Bruno Starter Guide** collection created by the Bruno team. It pairs with the official **[Quick Start](https://docs.usebruno.com/introduction/quick-start)** on the docs site and gives beginners a hands-on walkthrough inside the app.
