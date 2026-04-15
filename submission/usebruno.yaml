@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: solutions
+  version: 1.0.0
+paths:
+  /users/usebruno:
+    get:
+      summary: 01-github-api
+      operationId: users_ganeshpatil_documents_bruno_bruno_starter_guide_01-github-api_yml
+      description: ''
+      tags:
+        - ''
+      responses:
+        '200':
+          description: ''
+      servers:
+        - url: https://api.github.com
+  /:
+    post:
+      summary: 03-script-request
+      operationId: >-
+        users_ganeshpatil_documents_bruno_bruno_starter_guide_03-script-request_yml
+      description: ''
+      tags:
+        - ''
+      responses:
+        '200':
+          description: ''
+      servers:
+        - url: https://echo.usebruno.com
+  /basic-auth/usebruno/1234:
+    get:
+      summary: 04-auth-request
+      operationId: >-
+        users_ganeshpatil_documents_bruno_bruno_starter_guide_04-auth-request_yml
+      description: ''
+      tags:
+        - ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - 04-auth-request: []
+      servers:
+        - url: https://httpbin.org
+servers: []
+components:
+  schemas:
+    02-echo-bru:
+      type: object
+      properties:
+        title:
+          type: string
+        msg:
+          type: string
+      example:
+        title: Bruno
+        msg: Loved by developers. Built for developers
+  requestBodies:
+    02-echo-bru:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/02-echo-bru'
+      description: ''
+      required: true
+  securitySchemes:
+    04-auth-request:
+      type: http
+      scheme: basic
