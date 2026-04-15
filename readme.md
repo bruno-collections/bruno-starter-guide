@@ -6,20 +6,16 @@
 
 Bruno is an **open-source**, **Git-friendly**, **local-first** API client. This repository is the companion **Bruno Starter Guide** collection created by the Bruno team. It pairs with the official **[Quick Start](https://docs.usebruno.com/introduction/quick-start)** on the docs site and gives beginners a hands-on walkthrough inside the app.
 
-You are welcome to go deeper anytime with topics like:
-
-- **Authentication**
-- **Scripting**
-- **Proxy** settings
-- **Secrets**
-- **CI**
-
-They help you get more out of the product—the Quick Start is only the beginning.
+<p align="center">
+  <img src="bruno-ui.png" alt="Bruno Starter Guide collection open in the Bruno app" width="720" />
+</p>
 
 ---
 
-<p align="center"><strong>Open this collection in Bruno</strong></p>
-<p align="center"><strong>Use Fetch in Bruno</strong> to clone this repo and open the collection <strong>directly in the Bruno app</strong> wiht one click, no manual <code>git clone</code> or “open folder” steps.</p>
+## Getting started
+
+**Use Fetch in Bruno** to open this collection in Bruno to validate your work, with one click, no manual `git clone` or open folder steps.
+
 <p align="center">
   <a href="https://fetch.usebruno.com?url=https%3A%2F%2Fgithub.com%2Fbruno-collections%2Fbruno-starter-guide.git" target="_blank" rel="noopener noreferrer">
     <img src="https://fetch.usebruno.com/button.svg" alt="Fetch in Bruno" width="160" height="40" />
