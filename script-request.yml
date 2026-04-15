@@ -1,5 +1,5 @@
 info:
-  name: script-request
+  name: 03-script-request
   type: http
   seq: 3
 

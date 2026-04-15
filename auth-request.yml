@@ -1,5 +1,5 @@
 info:
-  name: auth-request
+  name: 04-auth-request
   type: http
   seq: 4
 

@@ -1,5 +1,5 @@
 info:
-  name: github-api
+  name: 01-github-api
   type: http
   seq: 1
 
