@@ -1,7 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: Bruno Starter Guide
+  name: Bruno Starter guide
 bundled: false
 extensions:
   bruno:

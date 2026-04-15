@@ -1,0 +1,30 @@
+info:
+  name: script-request
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://echo.usebruno.com
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        const body = {
+          name: "Bruno",
+          msg: "I love opensource devtools"
+        };
+
+        req.setHeader("Content-Type", "application/json");
+
+        req.setBody(body);
+
+        console.log(req.getName())
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

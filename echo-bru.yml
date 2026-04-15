@@ -1,39 +1,37 @@
 info:
   name: echo-bru
   type: http
-  seq: 3
+  seq: 2
 
 http:
   method: POST
-  url: "{{base-url}}"
+  url: "{{baseURL}}"
   body:
     type: json
     data: |-
       {
         "title": "Bruno",
-        "role": "Loved by developers. Built for developers."
+        "msg": "Loved by developers. Built for developers"
       }
   auth: inherit
 
 runtime:
   scripts:
-    - type: before-request
-      code: |-
-        req.setBody({
-          "title":"Bruno",
-          "msg":"I love opensource devtools"
-        })
     - type: tests
       code: |-
         test("body has title", function () {
           expect(res.getBody()).to.have.property("title");
+          });
+
+        test("200 status code", function () {
+          expect(res.getStatus()).to.eql(200);
         });
   assertions:
     - expression: res.status
       operator: eq
       value: "200"
     - expression: res.body.title
-      operator: contains
+      operator: eq
       value: Bruno
 
 settings:

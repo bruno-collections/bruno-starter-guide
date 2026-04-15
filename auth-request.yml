@@ -1,0 +1,18 @@
+info:
+  name: auth-request
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://httpbin.org/basic-auth/usebruno/1234
+  auth:
+    type: basic
+    username: usebruno
+    password: "1234"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
