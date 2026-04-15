@@ -1,10 +1,19 @@
-
+<p align="center">
+  <img src="logo-transparent.png" alt="Bruno Starter Guide" width="160" />
+</p>
 
 # Bruno Starter Guide
 
 Bruno is an **open-source**, **Git-friendly**, **local-first** API client. This repository is the companion **Bruno Starter Guide** collection created by the Bruno team. It pairs with the official **[Quick Start](https://docs.usebruno.com/introduction/quick-start)** on the docs site and gives beginners a hands-on walkthrough inside the app.
 
-You are welcome to go deeper anytime: topics like **authentication**, **scripting**, **proxy** settings, secrets, and CI help you get more out of the product—the Quick Start is only the beginning.
+You are welcome to go deeper anytime with topics like:
+- **Authentication**, 
+- **Scripting**, 
+- **Proxy** settings, 
+- **Secrets**, and 
+- **CI** 
+
+will help you get more out of the product—the Quick Start is only the beginning.
 
 ---
 
